@@ -16,7 +16,23 @@
       <li><a href="registry.html">Registry</a></li>
       <li><a href="#rsvp">RSVP</a></li>
     </ul>
+    <button class="nav-toggle" aria-label="Open menu" onclick="
+      const m = document.getElementById('mobile-menu');
+      m.style.display = m.style.display === 'flex' ? 'none' : 'flex';
+      ">&#9776;</button>
   </nav>
+  <div id="mobile-menu" style="
+    display: none; flex-direction: column; gap: 0;
+    position: fixed; top: 64px; left: 0; right: 0; z-index: 99;
+    background: rgba(250, 246, 240, 0.97);
+    border-bottom: 1px solid rgba(201, 168, 124, 0.25);
+    backdrop-filter: blur(8px);
+  ">
+    <a href="index.html" style="padding: 1rem 2rem; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 500; color: var(--charcoal); text-decoration: none; border-bottom: 1px solid rgba(201,168,124,0.15);">Home</a>
+    <a href="details.html" style="padding: 1rem 2rem; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 500; color: var(--charcoal); text-decoration: none; border-bottom: 1px solid rgba(201,168,124,0.15);">Details</a>
+    <a href="registry.html" style="padding: 1rem 2rem; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 500; color: var(--charcoal); text-decoration: none; border-bottom: 1px solid rgba(201,168,124,0.15);">Registry</a>
+    <a href="index.html#rsvp" style="padding: 1rem 2rem; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 500; color: var(--charcoal); text-decoration: none;">RSVP</a>
+  </div>
 
   <!-- Hero -->
   <section class="hero">

@@ -3,34 +3,88 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Details — Emma & James</title>
+  <title>Details — Rachel & Jonah</title>
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 
   <nav>
-    <a class="nav-monogram" href="index.html">E & J</a>
+    <a class="nav-monogram" href="index.html">R & J</a>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="details.html" class="active">Details</a></li>
       <li><a href="registry.html">Registry</a></li>
       <li><a href="index.html#rsvp">RSVP</a></li>
     </ul>
+    <button class="nav-toggle" aria-label="Open menu" onclick="
+      const m = document.getElementById('mobile-menu');
+      m.style.display = m.style.display === 'flex' ? 'none' : 'flex';
+      ">&#9776;</button>
   </nav>
+  <div id="mobile-menu" style="
+    display: none; flex-direction: column; gap: 0;
+    position: fixed; top: 64px; left: 0; right: 0; z-index: 99;
+    background: rgba(250, 246, 240, 0.97);
+    border-bottom: 1px solid rgba(201, 168, 124, 0.25);
+    backdrop-filter: blur(8px);
+  ">
+    <a href="index.html" style="padding: 1rem 2rem; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 500; color: var(--charcoal); text-decoration: none; border-bottom: 1px solid rgba(201,168,124,0.15);">Home</a>
+    <a href="details.html" style="padding: 1rem 2rem; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 500; color: var(--charcoal); text-decoration: none; border-bottom: 1px solid rgba(201,168,124,0.15);">Details</a>
+    <a href="registry.html" style="padding: 1rem 2rem; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 500; color: var(--charcoal); text-decoration: none; border-bottom: 1px solid rgba(201,168,124,0.15);">Registry</a>
+    <a href="index.html#rsvp" style="padding: 1rem 2rem; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 500; color: var(--charcoal); text-decoration: none;">RSVP</a>
+  </div>
 
   <div class="page-header">
-    <p class="page-label">Saturday, June 14, 2026</p>
+    <p class="page-label">Tuesday, May 11, 2027</p>
     <h1 class="page-title">Event Details</h1>
   </div>
 
+  <!-- Venue -->
+  <div class="section">
+    <div class="section-heading">
+      <p class="label">The Place to Be</p>
+      <h2>The Venue</h2>
+    </div>
+
+    <div class="venue-block">
+      <div>
+        <h2>Holy Trinity Anglican Church</h2>
+        <address>
+          263 Spring Street<br>
+          Hillsdale, Michigan 49242
+        </address>
+        <br>
+        <p style="font-size:0.9rem; color:var(--charcoal); line-height:1.7;">
+          VENUE DESCRIPTION
+        </p>
+        <br>
+        <a href="https://www.google.com/maps/dir//Holy+Trinity+Anglican+Parish,+263+Spring+St,+Hillsdale,+MI+49242/@41.9251873,-84.6516028,17z/data=!4m17!1m7!3m6!1s0x883d7258209db2e1:0xc1b43e8a1c42d3af!2sHoly+Trinity+Anglican+Parish!8m2!3d41.9251833!4d-84.6490279!16s%2Fg%2F11cr_bctgm!4m8!1m0!1m5!1m1!1s0x883d7258209db2e1:0xc1b43e8a1c42d3af!2m2!1d-84.6490607!2d41.9251996!3e0?entry=ttu&g_ep=EgoyMDI2MDUwNi4wIKXMDSoASAFQAw%3D%3D" target="_blank"
+           style="font-size:0.7rem; letter-spacing:0.2em; text-transform:uppercase;
+                  font-weight:500; color:var(--bark); border-bottom:1px solid var(--warm-tan);
+                  padding-bottom:2px; text-decoration:none;">
+          Get Directions →
+        </a>
+      </div>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.496412600029!2d-84.65160282391298!3d41.9251832712367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883d7258209db2e1%3A0xc1b43e8a1c42d3af!2sHoly%20Trinity%20Anglican%20Parish!5e0!3m2!1sen!2sus!4v1778438638813!5m2!1sen!2sus" 
+        width="100%" 
+        height="220" 
+        style="border:0; border-radius:2px; display:block;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+  
   <!-- Schedule -->
   <div class="section">
     <div class="section-heading">
       <p class="label">The Day</p>
-      <h2>Schedule</h2>
+      <h2>Schedule TBD</h2>
     </div>
 
-    <div class="timeline">
+    <!-- <div class="timeline">
       <div class="timeline-item">
         <p class="timeline-time">3:30 pm</p>
         <h3 class="timeline-title">Guests Arrive</h3>
@@ -55,49 +109,12 @@
         <p class="timeline-time">10:00 pm</p>
         <h3 class="timeline-title">Send-Off</h3>
         <p class="timeline-desc">Evening ends with a sparkler farewell. Shuttle service back to hotels runs until 11 pm.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Venue -->
-  <div class="section">
-    <div class="section-heading">
-      <p class="label">Where to Go</p>
-      <h2>The Venue</h2>
-    </div>
-
-    <div class="venue-block">
-      <div>
-        <h2>Willow Creek Farm</h2>
-        <address>
-          247 Maple Ridge Road<br>
-          Stowe, Vermont 05672
-        </address>
-        <br>
-        <p style="font-size:0.9rem; color:var(--charcoal); line-height:1.7;">
-          Nestled in the Vermont foothills, Willow Creek Farm is a working farm
-          and event venue surrounded by rolling meadows and old-growth maples.
-          The ceremony takes place on the south lawn; the reception in the
-          hand-hewn timber barn.
-        </p>
-        <br>
-        <a href="https://maps.google.com" target="_blank"
-           style="font-size:0.7rem; letter-spacing:0.2em; text-transform:uppercase;
-                  font-weight:500; color:var(--bark); border-bottom:1px solid var(--warm-tan);
-                  padding-bottom:2px; text-decoration:none;">
-          Get Directions →
-        </a>
-      </div>
-      <div class="venue-map-placeholder">
-        <span>◎</span>
-        <p>Add a Google Maps embed here</p>
-        <p style="opacity:0.6; font-size:0.7rem;">Replace this block in details.html</p>
-      </div>
+      </div> -->
     </div>
   </div>
 
   <!-- Travel & Lodging -->
-  <div class="section">
+  <!-- <div class="section">
     <div class="section-heading">
       <p class="label">Getting Here</p>
       <h2>Travel & Lodging</h2>
@@ -106,23 +123,23 @@
       <div class="info-card">
         <span class="card-icon">✈</span>
         <h3>Nearest Airport</h3>
-        <p>Burlington International</p>
-        <p class="card-sub">~45 min drive to venue</p>
+        <p>Detroit Metro</p>
+        <p class="card-sub">~90 min drive to venue</p>
       </div>
       <div class="info-card">
         <span class="card-icon">🏡</span>
-        <h3>Hotel Block</h3>
-        <p>The Stowe Inn</p>
+        <h3>Hotel Block?</h3>
+        <p>NAME OF HOTEL</p>
         <p class="card-sub">Code: EMMAJAMES26<br>Reserve by May 1, 2026</p>
       </div>
       <div class="info-card">
         <span class="card-icon">🚌</span>
-        <h3>Shuttle</h3>
+        <h3>Shuttle?</h3>
         <p>Hotel to Venue</p>
         <p class="card-sub">Departs 3:00 pm · Returns 10:30 pm</p>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <!-- FAQ -->
   <div class="section">
@@ -132,24 +149,22 @@
     </div>
 
     <div style="max-width:640px; margin:0 auto;">
-      <details style="border-top:1px solid rgba(201,168,124,0.3); padding:1.25rem 0;">
+      <!-- <details style="border-top:1px solid rgba(201,168,124,0.3); padding:1.25rem 0;">
         <summary style="font-family:var(--serif); font-size:1.15rem; color:var(--bark); cursor:pointer; list-style:none;">
-          Is the ceremony outdoors?
+          Is the reception outdoors?
         </summary>
         <p style="margin-top:0.75rem; font-size:0.9rem; color:var(--deep-tan); line-height:1.7;">
-          Yes! The ceremony is on the south lawn. In the event of rain, we have a
+          Yes! The reception will be on the south lawn. In the event of rain, we have a
           beautiful covered pavilion as backup. We'll notify guests one week before
           if we need to use it.
         </p>
-      </details>
+      </details> -->
       <details style="border-top:1px solid rgba(201,168,124,0.3); padding:1.25rem 0;">
         <summary style="font-family:var(--serif); font-size:1.15rem; color:var(--bark); cursor:pointer; list-style:none;">
           Are children welcome?
         </summary>
         <p style="margin-top:0.75rem; font-size:0.9rem; color:var(--deep-tan); line-height:1.7;">
-          We love your little ones! Children are welcome at the ceremony.
-          The reception is adults-only (18+), so we recommend arranging
-          childcare for the evening.
+          We love your little ones, and their presence makes the church more alive! Children are welcome at the ceremony.
         </p>
       </details>
       <details style="border-top:1px solid rgba(201,168,124,0.3); padding:1.25rem 0; border-bottom:1px solid rgba(201,168,124,0.3);">
@@ -159,15 +174,15 @@
         <p style="margin-top:0.75rem; font-size:0.9rem; color:var(--deep-tan); line-height:1.7;">
           Garden formal — think summer dresses, linen suits, or cocktail attire.
           Since part of the evening is on grass, we recommend block heels or flats.
-          June in Vermont can be cool in the evenings; a light layer is a good idea.
+          May in Hillsdale can be occasionally rainy in the evenings; a light layer is a good idea.
         </p>
       </details>
     </div>
   </div>
 
   <footer>
-    <span class="footer-monogram">E & J</span>
-    <p>June 14, 2026 &nbsp;·&nbsp; Stowe, Vermont</p>
+    <span class="footer-monogram">R & J</span>
+    <p>May 11, 2027 &nbsp;·&nbsp; Hillsdale, Michigan</p>
   </footer>
 
 </body>
